@@ -7,7 +7,7 @@
     "puppeteer": "^13.7.0"
   },
   "scripts": {
-    "crawCoinTelegraph": "node ./src/crawCoinTelegraph.js"
+    "start": "node ./src/crawCoinTelegraph.js"
   },
   "author": "Tam"
 }
