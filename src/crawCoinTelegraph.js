@@ -46,7 +46,7 @@ async function handler() {
                     results.push(elem)
                 })
             }
-            const dataset = await Apify.openDataset('craw_cointelegraph');
+            const dataset = await Apify.openDataset('cointelegraph');
             await dataset.pushData(results);
         };
         // Create a PuppeteerCrawler
