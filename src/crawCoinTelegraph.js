@@ -46,8 +46,7 @@ async function handler() {
                     results.push(elem)
                 })
             }
-            const dataset = await Apify.openDataset('JCGrNvA47rqVP7jYT');
-            await dataset.pushData(results);
+            Apify.pushData(results);
         };
         // Create a PuppeteerCrawler
         const crawler = new Apify.PuppeteerCrawler({
