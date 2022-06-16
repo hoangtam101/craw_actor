@@ -2,13 +2,12 @@
 # the available images at https://sdk.apify.com/docs/guides/docker-images
 # You can also use any other image from Docker Hub.
 #FROM apify/actor-node:16
-FROM apify/actor-node-puppeteer-chrome
-
+FROM apify/actor-node-puppeteer-chrome:16
 
 
 # Second, copy just package.json and package-lock.json since those are the only
 # files that affect "npm install" in the next step, to speed up the build.
-COPY --chown=myuser package*.json ./
+COPY package*.json ./
 
 # Install NPM packages, skip optional and development dependencies to
 # keep the image small. Avoid logging too much and print the dependency
@@ -28,7 +27,7 @@ RUN npm --quiet set progress=false \
 # for most source file changes.
 # Note that because we are also copying the "apify_storage" directory, we
 # need to set a correct owner to make it writable, for local runs in Docker.
-COPY --chown=myuser . ./
+COPY . ./
 
 
 # Optionally, specify how to launch the source code of your actor.
