@@ -16,7 +16,7 @@ async function handler() {
             const scrapedData = [];
             const $ = cheerio.load(content)
             let results = []
-            if (request.url.include('press-releases')) {
+            if (request.url.includes('press-releases')) {
                 $('.posts-listing__item').each((index, el) => {
                     const title = $(el).find('.post-card-inline__title').text()
                     const content = $(el).find('.post-card-inline__text').text()
