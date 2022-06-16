@@ -1,0 +1,13 @@
+{
+  "name": "news-crypto",
+  "version": "0.0.1",
+  "dependencies": {
+    "apify": "^2.3.2",
+    "cheerio": "^1.0.0-rc.11",
+    "puppeteer": "^13.7.0"
+  },
+  "scripts": {
+    "crawCoinTelegraph": "NODE_ENV=development node ./src/crawCoinTelegraph.js"
+  },
+  "author": "Nam"
+}
